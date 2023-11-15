@@ -12,7 +12,7 @@ https://templatemo.com/tm-584-pod-talk
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #ffffff;
+  --white-color:                  #883434;
   --primary-color:                #00CC99;
   --secondary-color:              #0066CC;
   --section-bg-color:             #f0f8ff;
@@ -249,7 +249,7 @@ main {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-  background-image: url('../images/templatemo-wave-header.jpg'), linear-gradient(#348CD2, #FFFFFF);;
+  background-image: url('../images/templatemo-wave-header.jpg'), linear-gradient(rgb(210, 194, 52), #FFFFFF);;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -475,7 +475,7 @@ main {
   CAROUSEL        
 -----------------------------------------*/
 .hero-section {
-  background-image: url('../images/templatemo-wave-banner.jpg'), linear-gradient(#348CD2, #FFFFFF);
+  background-image: url('../images/templatemo-wave-banner.jpg'), linear-gradient(rgb(168, 221, 107), #883434);
   background-repeat: no-repeat;
   background-size: 108% 76%;
   background-position: top;

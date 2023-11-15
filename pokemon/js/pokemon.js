@@ -23,21 +23,19 @@ const setPokemonAletorioDOM = (AletorioPokemon)=>{
 
     for(let i=0; i<AletorioPokemon.results.length ; i++){
        //console.log(AletorioPokemon.results[i].data)
-            html = html + `
-            <div class="owl-carousel-info-wrap item active ${i==4?'center':''} ">
-            <img src="${AletorioPokemon.results[i].data.sprites.front_default}"
-                class="owl-carousel-image img-fluid" alt="">
-                <div class="owl-carousel-info">
-                <h4 class="mb-2">
-                ${ AletorioPokemon.results[i].name }
-                    <img src="images/verified.png" class="owl-carousel-verified-image img-fluid"
-                        alt="">
-                </h4>
-                <span class="badge">${AletorioPokemon.results[i].data.species.name}</span>
-                <span class="badge">Business</span>
-            </div>
-        </div>
-            `;
+       html += `
+       <div class="owl-carousel-info-wrap item active ${i==4?'center':''} ">
+           <img src="${AletorioPokemon.results[i].data.sprites.front_default}">
+           <div class="name-verified-container" style="display: flex; align-items: center; justify-content: center;">
+               <h3 class="mb-2" style="margin-right: 10px;">
+                   ${AletorioPokemon.results[i].name}
+               </h3>
+               <img src="images/verified.png" class="owl-carousel-verified-image img-fluid" alt="">
+           </div>
+           <div class="carousel-caption d-none d-md-block">
+           </div>
+       </div>
+       `;
         }
         $divAleatorio.innerHTML = html;
         $($divAleatorio).owlCarousel({
@@ -71,7 +69,7 @@ window.addEventListener('load', async function (){
         if ($divAleatorio) {
             // Elemento encontrado, puedes proceder
             let min = 1;
-            let max = 1282;
+            let max = 1200;
             let aleatorio = Math.floor(Math.random() * (max - min)) + min;
             let AletorioPokemon = await getPokemon(aleatorio, 10);
             setPokemonAletorioDOM(AletorioPokemon);
